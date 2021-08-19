@@ -93,7 +93,8 @@ class ConfuMagnumIntegrationConan(ConanFile):
                 cmake.definitions["CMAKE_EXE_LINKER_FLAGS"] = "-s USE_PTHREADS"
         cmake.configure(source_folder=self._source_subfolder)
         cmake.definitions["CMAKE_MODULE_PATH"] = "/home/walde/emsdk/upstream/emscripten/cmake/Modules/"
-
+        print("HUHU LETS GO")
+        print(cmake.definitions["CMAKE_MODULE_PATH"])
         return cmake
 
     def build(self):
